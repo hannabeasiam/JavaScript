@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String Object</title>
+    <script type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>String Object</h3>
+    <script type="text/javascript">
+      //define string variable and assign string with single quote
+      var firstString = 'This is the first string<br/>';
+      var secondString = 'This is the second string<br/>';
+      //use string method 
+      document.writeln(firstString.bold()); //document.writeln make new line
+      document.writeln(secondString.big()); //big method makes text big
+      document.write('Broward College'.link('https://broward.edu') + '<br/>'); //add link, wrap text
+      document.write('Broward College'.toUpperCase() + '<br/>');
+      document.writeln('Broward College'.fontcolor('red') + '<br/>'); //also can use hexadecimal 
+      var thirdString = 'Javascript';
+      for (var i = 0; i < thirdString.length; i++) {
+        document.write(thirdString[i]+'<br/>'); //access each character of string and display with newLine
+      };
+      var fourthString = 'c:\\windows\\system32';
+      document.write(fourthString + '<br/>');
+      var fifthString = 'This is the fifth string which is good';
+      document.write(fifthString.italics().bold() + '<br/>');
+      document.write('indexOf("h",20) for fifthString is ' +
+        fifthString.indexOf("h",20) + '<br/>');
+      document.write('lastIndexOf("is",20) for fifthString is ' +
+        fifthString.lastIndexOf("is",20) + '<br/>');
+      document.write(fifthString.substring(3,9)+'<br/>');
+      document.write(fifthString.substr(3,7)+'<br/>');
+    </script>
+  </body>
+</html>
