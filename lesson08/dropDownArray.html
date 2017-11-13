@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Employee Database</title>
+    <script type="text/javascript" src="employee.js"></script>
+    <script type="text/javascript">
+      var employees = new Array();
+      //first array store place holder message
+      employees[0] = 'Select an employee';
+      employees.push(new employeeObject('George','IT',661));
+      employees.push(new employeeObject('Mai Li', 'Sales', 551));
+      employees.push(new employeeObject('Maria Alvarez', 'Human Resources', 441));
+      employees.push(new employeeObject('Tom Smith', 'Marketing', 331));
+      //number of element emplpyees object saved under variable len
+      var len = employees.length;
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Employee Database</h3>
+    <form name="empForm" id="empForm">
+      <strong>Select a name to view information:</strong>
+      <!--onChange event handler, change option is selected that occur-->
+      <select name="empName" onChange="if (this.selectedIndex!=0) employees[this.selectedIndex].showEmployee()">
+        <script type="text/javascript">
+          for (i=0;i<len;i++) {
+            if (i==0) {
+              document.write('<option>'+employees[i] + '</option>');
+            } else {
+              document.write('<option>'+ employees[i].name + '</option>');
+            }
+          }
+        </script>
+      </select>
+      <p><input type="button" value="Show All Employees" onClick="showAllEmployees();"></p>
+    </form>
+  </body>
+</html>
