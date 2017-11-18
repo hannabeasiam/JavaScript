@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Select Object</title>
+    <script type="text/javascript">
+
+      function isSelected(theForm) {
+        //pass theForm as parameter
+        var len = theForm.mySelect.length; //name of the select element options length
+        var theSelected = theForm.mySelect.value;
+        alert(theSelected)
+        for (var i=0; i<len; i++) {
+          if (theForm.mySelect.options[i].selected) { //property selected true/false 
+            alert('Value: ' + theForm.mySelect.options[i].value);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Select Object</h3>
+    <form name="myForm" method="post" action="">
+      Select an item<br>
+      <select name="mySelect" onChange="isSelected(this.form);">
+        <option value="1">First option</option>
+        <option value="2">Second option</option>
+        <option value="3">Third option</option>
+      </select><br>
+      <!--this is current object, which is button, form is the form this button belongs to-->
+      <input type="button" value="Check Selection" onClick="isSelected(this.form)">
+    </form>
+  </body>
+</html>

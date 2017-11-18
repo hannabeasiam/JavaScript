@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text & Textarea Objects</title>
+    <script type="text/javascript">
+    //if user put cusor on text box, delete contents, if user does not input anything and
+    //leave cursor, put contents again - used focusevent, blur event
+    //onfocus event handler: Specifies the JavaScript code to execute when an element gets focus.
+      function updateCommentCount() {
+        //lenght will hold content of value
+        document.myForm.commentCount.value = document.myForm.comments.value.length;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Text & Textarea Objects</h3>
+    <form name="myForm" method="post" action="">
+      *Name: <input type="text" name="fullname" 
+      onfocus="if (this.value=='Enter your full name') {this.value = ''}" 
+      onblur="if (this.value=='') {this.value='Enter your full name'}" value="Enter your full name"><br>
+      *Comments: <textarea name="comments" 
+      onfocus="if (this.value=='This is where you enter comments') {this.value = ''};updateCommentCount();" 
+      onBlur="if (this.value == '') {this.value = 'This is where you enter comments'};updateCommentCount();" 
+      onKeyUp="updateCommentCount()">This is where you enter comments</textarea>
+
+      <!--commentCount is value of property name, name is under object myForm-->
+      <input name="commentCount" type="text" disabled="disabled" value="32" size="4">
+    </form>
+  </body>
+</html>

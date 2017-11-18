@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Button Object</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Button Object</h3>
+    <form name="myForm" method="post" action="">
+      <!--inline javascript, if i do alert(this) - this refers button element. 
+      attitute will input tag, button. in inline js, always need to look actual tag it refers to. 
+      alert(this.form.name) - myForm
+      all the attribute in the tag, become property. so, myForm property are (name, method, action)-->
+      <input type="button" name="myButton" value="Click Me" onclick="alert(this.form.name)">
+    </form>
+  </body>
+</html>
