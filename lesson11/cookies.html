@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cookies</title>
+    <script type="text/javascript">
+    //to test cookie in browser firefox is recomemded
+      var currentDate = new Date();
+      //as long  as expire date is past, cookie will deleted
+      //assign year past to store paste date
+      var expireDatePast = new Date(currentDate.getFullYear()-1,currentDate.getMonth(),currentDate.getDate());
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Cookies</h3>
+    <script type="text/javascript">
+    //store by browser, page remember info one page to another
+    //cookie property . 
+      var cookiesContent = 'Start: ' + document.cookie + '<br/>';
+      document.cookie = 'Author=Hanna'; //to set cookie assign name and value pair name = Author value = Hanna
+      //variable cookiesContent is to display cookie info later with document.write
+      cookiesContent += 'After setting Author: ' + document.cookie + '<br/>';
+      //define another cookie  assign another name and value pair
+      document.cookie = 'College=Broward';
+      cookiesContent += 'After setting College: ' + document.cookie + '<br/>';
+      //to delete cookie, specify name and assign no value; and expires keyword with expiredate inthe past
+      document.cookie = 'Author=;expires=' + expireDatePast;
+      cookiesContent += 'After deleting Author: ' + document.cookie + '<br/>';
+      document.cookie = 'College=;expires='+expireDatePast;
+      cookiesContent += 'After deleting College: ' + document.cookie;
+      document.write(cookiesContent);
+    </script>
+  </body>
+</html>
