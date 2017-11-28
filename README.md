@@ -11,3 +11,4 @@ This is JavaScript study repository to share CTS2852C class work
 * Lesson 9: Changing HTML on the Fly
 * Lesson 10: Developing Interactive Forms with JavaScript
 * Lesson 11: JavaScript Security
+* Lesson 12: JavaScript Libraries and Frameworks
