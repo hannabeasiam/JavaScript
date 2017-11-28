@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab6 Hanna Lee</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--<script src="script/lab6.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() { //open anonymous function
+        //grab input tag add 
+        
+        $('input').on('change',function () {
+          $(this).each(function() {
+            var findID = this.id; console.log(findID);
+// Show, Hide, Toggle, Fade In, Fade Out, Fade To, Slide Down, Slide Up, Slide Toggle.
+            switch (findID) {
+              case 'Show':
+                $('div').show();
+                break;
+              case 'Hide':
+                $('div').hide();
+                break;
+              case 'Toggle':
+                $('div').toggle();
+                break;
+              case 'FadeIn':
+                $('div').fadeIn(); //Display the matched elements by fading them to opaque.
+                break;
+              case 'FadeOut':
+                $('div').fadeOut(3000);//Hide the matched elements by fading them to transparent.
+                break;  
+              case 'FadeTo':    //slow indicate duration of 200-600 opacity 0.5
+                $('div').fadeTo('slow', 0.5); //Adjust the opacity of the matched elements.
+                break;
+              case 'SlideDown':
+                $('div').slideDown(); //Display the matched elements with a sliding motion.
+                break;
+              case 'SlideUp':
+                $('div').slideUp(); //Hide the matched elements with a sliding motion.
+                break;
+              case 'SlideToggle':
+                $('div').slideToggle(); //Display or hide the matched elements with a sliding motion.
+                break;
+            }            
+          });
+          
+        });
+
+
+      });
+
+    
+    </script>
+  </head>
+  <body>
+    <h1>Explore jquery</h1>
+    <form name="myForm">
+      <p>select function</p>
+
+      <input type="radio" name="animation" id="Show">
+      <label for="Show">Show</label>
+
+      <input type="radio" name="animation" id="Hide">
+      <label for="Hide">Hide</label>
+
+      <input type="radio" name="animation" id="Toggle">
+      <label for="Toggle">Toggle</label>
+      
+      <input type="radio" name="animation" id="FadeIn">
+      <label for="FadeIn">Fade In</label>
+
+      <input type="radio" name="animation" id="FadeOut">
+      <label for="FadeOut">Fade Out</label>
+
+      <input type="radio" name="animation" id="FadeTo">
+      <label for="FadeTo">Fade To</label>
+
+      <input type="radio" name="animation" id="SlideDown">
+      <label for="SlideDown">Slide Down</label>
+
+      <input type="radio" name="animation" id="SlideUp">
+      <label for="SlideUp">Slide Up</label>
+      
+      <input type="radio" name="animation" id="SlideToggle">
+      <label for="SlideToggle">Slide Toggle</label>
+    </form>
+    <div id="soflomain" >
+      <img src="assets/img/logo.png" alt="sofloLogo">
+      <p>Not only is technology always changing. It’s also important to remember that the internet has a numerous amount of recourses to learn from as a programmer. 
+        Being a part of the online community as programming students, and recent programming graduates; this is a platform where likeminded people share resources that helped them learn and grow.
+        With a numerous amount of information shared on this one platform, as a one stop shop to find resources that you need; as a student programmer entering the world as a professional. 
+        At SoFlo Nucleus learning never ends.</p>
+    </div>
+
+  
+  </body>
+</html>
