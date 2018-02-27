@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Change Attribute</title>
+    <script type="text/javascript">
+      
+      function getValues() {
+        let div = null;
+        if (div == null) {
+          div = document.getElementById('SetDiv');
+        }
+        let theClass = div.getAttribute('class');
+        alert('theClass='+theClass);
+        //set attribute, add attribute class, value 'center'
+        div.setAttribute('class','center');
+        theClass = div.getAttribute('class');
+        alert('theClass='+theClass);
+        div.setAttribute('class','right');
+        theClass = div.getAttribute('class');
+        alert('theClass='+theClass);
+        div.setAttribute('class','justify');
+        theClass = div.getAttribute('class');
+        alert('theClass='+theClass);
+        div.removeAttribute('class');
+        theClass = div.getAttribute('class');
+        alert('theClass='+theClass);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Change Attribute</h3>
+    <div id="SetDiv" class="left">
+      <p>What are the attributes of this div tag?</p>
+    </div>
+    <input type="button" value="Click Me!" onClick="getValues()">
+  </body>
+</html>
