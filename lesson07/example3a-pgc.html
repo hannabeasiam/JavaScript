@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Arrays</h3>
+    <script type="text/javascript">
+    /*JS is allows prototyping where properties and methods can be added to a standard object
+    if a property or method to display a string in certain way added, we would use prototype*/
+      var question = new Array(10);
+      question[0] = 'What is 5 * 6?';
+      question[1] = 'Who played Scarlett O\'Hara?';
+      question[2] = 'Which horse won the 1980 Irish Derby?';
+      var answers = new Array(30,'Vivien Leigh','Tyrnavos');
+      for (var i in question) {
+        document.write('Q: ' + question[i] + ' A: ' + answers[i] + '<br/>');
+      }
+      var myArray = new Array('Value 2','Value 1','Value 3',
+        'Value 11','Value 5','Value 4');
+      document.write(myArray + '<br/>');
+      myArray.reverse();
+      document.write(myArray + '<br/>');
+      myArray.sort();
+      document.write(myArray + '<br/>');
+      var myNumbers = new Array(4,6,1,3,9,11,2,5);
+      myNumbers.sort();
+      document.write(myNumbers + '<br/>');
+      var myManyArrays = myNumbers.join('::');
+      document.write(myManyArrays + '<br/>');
+      myNumbers.push(21);
+      document.write(myNumbers + '<br/>');
+      var poppedNumber = myNumbers.pop();
+      document.write(myNumbers + '<br/>');
+      myNumbers.unshift(21);
+      document.write(myNumbers + '<br/>');
+      myNumbers.shift();
+      document.write(myNumbers + '<br/>');
+      var multiDimArr = new Array();
+      multiDimArr[0] = new Array();
+      multiDimArr[1] = new Array();
+      multiDimArr[2] = new Array();
+      multiDimArr[3] = 'Multi-dimensional';
+      multiDimArr[0][0] = 10;
+      multiDimArr[0][1] = 20;
+      multiDimArr[1][0] = 30;
+      multiDimArr[1][1] = 40;
+      multiDimArr[2][1] = 50;
+      document.write(multiDimArr[1][0]);
+    </script>
+  </body>
+</html>

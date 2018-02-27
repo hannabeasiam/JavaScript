@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String Object</title>
+    <script type="text/javascript">
+      function blueVerdandaFont(){
+        return '<span style="font-face: verdana; color: blue; font-size: 30px;">' + this.toString() + '</span>';
+      }
+      String.prototype.blueV =blueVerdandaFont;
+      String.prototype.blueVDescription = 'The blueV() function creates blue Verdana font.';
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>String Object</h3>
+    <script>
+      var fifthString = 'This is the fifth string which is good';
+      document.write('<p>' + fifthString.blueVDescription + '</p>');
+      document.write('<p>' + fifthString.blueV() + '</p>');
+      document.write('indexOf("h",20) for fifthString is ' +
+        fifthString.indexOf('h',20) + '<br/>');
+      document.write('lastIndexOf("is",20) for fifthString is ' +
+        fifthString.lastIndexOf("is",20) + '<br/>');
+      document.write(fifthString.substring(3,9)+'<br/>');
+      document.write(fifthString.substr(3,7)+'<br/>');
+      document.write('charAt(8) is '+fifthString.charAt(8) +
+        '<br/>');
+    </script>
+  </body>
+</html>
