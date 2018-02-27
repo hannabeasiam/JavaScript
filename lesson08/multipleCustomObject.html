@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>House Custom Object</title>
+    <script type="text/javascript" src="house.js"></script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>House Custom Object</h3>
+    <script type="text/javascript">
+      /*using new object constructor and JSON to create custom object is not efficient when multiple instantiation of object need to 
+      be created. Here, instantiate an object and store it in a variable myhouse, new keyword say find function call House and extend
+      object  */
+      var myHouse = new House(5,'colonial',1990,true);
+      document.write('My house has ' + myHouse.rooms +
+        ' rooms.<br/>');
+      document.write('My house style is ' + myHouse.style +
+        '.<br/>');
+      document.write('My house was built in ' +
+        myHouse.yearBuilt + '.<br/>');
+      document.write('My house has a garage: ' +
+        myHouse.hasGarage + '.<br/>');
+      document.write('My house livingSpace is ' +
+        myHouse.livingSpace(30,70,2) + ' square feet.<br/>');// passing length, width, numFloors as argument
+      myHouse.maintain();
+      //we can use same House object to referencing instaciate another objact yourHouse
+      var yourHouse = new House(4,'spanish',2003,false);
+      document.write('<hr>Your house has ' + yourHouse.rooms +
+        ' rooms.<br/>');
+      document.write('Your house style is ' + yourHouse.style +
+        '.<br/>');
+      document.write('Your house was built in ' +
+        yourHouse.yearBuilt + '.<br/>');
+      document.write('Your house has a garage: ' +
+        yourHouse.hasGarage + '.<br/>');
+      document.write('Your house livingSpace is ' +
+        yourHouse.livingSpace(40,50,1) + ' square feet.<br/>');
+    </script>
+  </body>
+</html>

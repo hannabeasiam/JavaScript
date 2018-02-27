@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soldier Custom Object</title>
+    <script type="text/javascript">
+    //Define custom object in Javascript use javascript object notation : JSON
+      var soldier = {
+        //property : value separate them with comma, 
+        name: undefined,
+        rank: 'captain',
+        //define method anonymous function, does not have name, but has action to occur 
+        fallIn: function() {
+          alert('At attention, arms at the side, head and eyes forward.');
+        },
+        fallOut: function() {
+          alert('Drop out of formation, step back, about face!');
+        } //last method of property should not follow by comma, may cause runtime error (js interpreter is expecting an identifier)
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CIW JavaScript Specialist</h2>
+    <h3>Soldier Custom Object</h3>
+    <script type="text/javascript">
+      //soldier object name property is undefined, we can assign that value by referencing
+      soldier.name = 'Tina Savage';
+      document.write('The name of the soldier is ' +
+        soldier.name + '.<br/>');
+      document.write('The rank of ' + soldier.name + ' is ' +
+        soldier.rank+'.<br/>');
+      //make a call to the fallin object
+      soldier.fallIn();
+      soldier.fallOut();
+    </script>
+  </body>
+</html>
