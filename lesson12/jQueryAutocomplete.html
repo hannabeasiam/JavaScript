@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI</title>
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <style>
+      #dialog-link {
+        padding: .4em 1em .4em 20px;
+        text-decoration: none;
+        position: relative;
+      }
+      #dialog-link span.ui-icon {
+        margin: 0 5px 0 0;
+        position: absolute;
+        left: .2em;
+        top: 50%;
+        margin-top: -8px;
+      }
+      #icons span.ui-icon {
+        float: left;
+        margin: 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery UI</h1>
+    <h2>Autocomplete</h2>
+    <div>
+      <input id="autocomplete" title="type &quot;a&quot;">
+    </div>
+    <h2>Dialog</h2>
+    <p>
+      <a href="#"><span></span>Info</a>
+    </p>
+    <div id="dialog" title="Do you need information?">
+      <p>Press "Yes" to get information, "No"/X/Escape to close the dialog.</p>
+    </div>
+    <h2>Menu</h2>
+    <ul style="width:100px;" id="menu">
+      <li>Meat</li>
+      <li>Vegetable</li>
+      <li>Fruit
+        <ul>
+          <li>Strawberry</li>
+          <li>Orange</li>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Peach</li>
+        </ul>
+      </li>
+      <li>Dairy</li>
+      <li>Breads</li>
+    </ul>
+    <h2>Tooltip</h2>
+    <p>
+      <span title="First Tooltip">Hover over me</span>
+      to see the a tooltip and <span title="Second Tooltip">also over me</span>.
+    </p>
+    <h2>Highlight/Error</h2>
+    <p>
+      <strong></strong>This is highlighed!
+    </p>
+    <p>
+      <strong></strong>This is disabled!
+    </p>
+    <p>
+      <b></b> This is an error!
+    </p>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme"
+        ];
+        $('#autocomplete').autocomplete({
+          source: availableTags
+        });
+      });
+    </script>      
+  </body>
+</html>
